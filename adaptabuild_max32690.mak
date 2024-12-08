@@ -15,8 +15,6 @@ SRC_C += MAX/Libraries/CMSIS/Device/Maxim/MAX32690/Source/system_max32690.c
 
 SRC_ASM += MAX/Libraries/CMSIS/Device/Maxim/MAX32690/Source/GCC/$(MCU_STARTUP_FILE)
 
-# $(MODULE)_SRCPATH += $(MODULE_PATH)/drivers/src
-
 # drivers/src
 
 # zephyr_library_sources(
@@ -217,44 +215,9 @@ SRC_C += MAX/Libraries/PeriphDrivers/Source/RTC/rtc_reva.c
 # SRC_ASM += mdk/$(MCU_STARTUP_FILE)
 
 # ----------------------------------------------------------------------------
-# Set up the module level source and include paths
+# Set up the module level include path
 
-# $(MODULE)_SRCPATH :=
-# $(MODULE)_SRCPATH += $(MODULE_PATH)/drivers/src
-# $(MODULE)_SRCPATH += $(MODULE_PATH)/drivers/src/prs
-# $(MODULE)_SRCPATH += $(MODULE_PATH)/mdk
-
-# zephyr_include_directories(
-#     ${MSDK_PERIPH_SRC_DIR}/SYS
-#     ${MSDK_PERIPH_SRC_DIR}/ADC
-#     ${MSDK_PERIPH_SRC_DIR}/CAN
-#     ${MSDK_PERIPH_SRC_DIR}/CTB
-#     ${MSDK_PERIPH_SRC_DIR}/DMA
-#     ${MSDK_PERIPH_SRC_DIR}/EMCC
-#     ${MSDK_PERIPH_SRC_DIR}/FLC
-#     ${MSDK_PERIPH_SRC_DIR}/GPIO
-#     ${MSDK_PERIPH_SRC_DIR}/HPB
-#     ${MSDK_PERIPH_SRC_DIR}/I2C
-#     ${MSDK_PERIPH_SRC_DIR}/I2S
-#     ${MSDK_PERIPH_SRC_DIR}/ICC
-#     ${MSDK_PERIPH_SRC_DIR}/LP
-#     ${MSDK_PERIPH_SRC_DIR}/LPCMP
-#     ${MSDK_PERIPH_SRC_DIR}/OWM 
-#     ${MSDK_PERIPH_SRC_DIR}/PT
-#     ${MSDK_PERIPH_SRC_DIR}/RTC
-#     ${MSDK_PERIPH_SRC_DIR}/SEMA
-#     ${MSDK_PERIPH_SRC_DIR}/SPI
-#     ${MSDK_PERIPH_SRC_DIR}/SPIXF
-#     ${MSDK_PERIPH_SRC_DIR}/SPIXR
-#     ${MSDK_PERIPH_SRC_DIR}/TRNG
-#     ${MSDK_PERIPH_SRC_DIR}/TMR
-#     ${MSDK_PERIPH_SRC_DIR}/UART
-#     ${MSDK_PERIPH_SRC_DIR}/WDT
-#     ${MSDK_PERIPH_SRC_DIR}/WUT
-# )
-
-# $(MODULE)_INCPATH :=
-
+$(MODULE)_INCPATH :=
 $(MODULE)_INCPATH += $(MODULE_PATH)/MAX/Libraries/PeriphDrivers/Include/$(MCU_VARIANT)
 $(MODULE)_INCPATH += $(MODULE_PATH)/MAX/Libraries/CMSIS/Device/Maxim/$(MCU_VARIANT)/Include
 
